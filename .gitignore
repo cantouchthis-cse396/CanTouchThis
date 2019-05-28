@@ -1,0 +1,5 @@
+*.o
+Server
+Viewer
+Conversion
+build-*

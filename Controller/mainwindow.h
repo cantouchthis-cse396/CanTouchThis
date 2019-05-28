@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "../communication/ControllerClient.h"
-#include "../communication/Utility.h"
+#include "../Communication/ControllerClient.h"
+#include "../Communication/Utility.h"
 
 namespace Ui {
 class MainWindow;
@@ -31,7 +31,6 @@ private slots:
 	//client(CanTouchThis::LOCALHOST, CanTouchThis::PORT)
 
     void on_pushButton_clicked();
-
 
     //void on_lineEdit_textEdited(const QString &arg1);
 

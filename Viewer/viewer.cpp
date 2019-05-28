@@ -8,7 +8,7 @@
 #include <cassert>
 #include <memory>
 
-#include "../communication/ViewerClient.h"
+#include "../Communication/ViewerClient.h"
 
 GLuint model_list;
 Model model_object;
@@ -49,7 +49,7 @@ void Model::load_model(std::string model) {
 
 		while(!fileObject.eof()){
 			getline(fileObject, fileObjectLine);
-			
+
 			if (fileObjectLine.c_str()[0] == 'f') {
 				s_list.push_back(fileObjectLine);
 				fileObjectLine[0] = ' ';
@@ -66,8 +66,8 @@ void Model::load_model(std::string model) {
 								model_object.vertex_list.at(3 * (value - 1) + 2));
 				}
 				glEnd();
-			}			
-		}		
+			}
+		}
 	}
 	glEndList();
 }
@@ -171,8 +171,8 @@ void Loop(int a) {
 
 
 	// glClearColor(0.0, 0.0, 0.0, 0.0);
-	// glutDisplayFunc(draw_scene); 
-	// glutReshapeFunc(resize);  
+	// glutDisplayFunc(draw_scene);
+	// glutReshapeFunc(resize);
 	// glutKeyboardFunc(kb_input);
 
 	// glutMainLoop();

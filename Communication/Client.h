@@ -2,7 +2,10 @@
 #define __CLIENT_H__
 
 #include <boost/asio.hpp>
-#include <SDKDDKVer.h>
+
+#ifdef _WIN64
+  #include <SDKDDKVer.h>
+#endif
 
 #include <iostream>
 #include <cstdlib>

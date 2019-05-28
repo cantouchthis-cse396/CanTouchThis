@@ -10,7 +10,7 @@
 #include <cstdlib>
 #define S_NEW 40
 
-#include "../communication/ConversionClient.h"
+#include "../Communication/ConversionClient.h"
 
 using namespace std;
 
@@ -157,7 +157,7 @@ int main(int argc, char* argv[]) {
 	HWND hWnd = GetConsoleWindow();
 	ShowWindow(hWnd, SW_HIDE);
 #endif
-	
+
 	for (int i = 0; i < 20; ++i) {
 		for (int j = 0; j < 20; ++j) {
 			hMap.push_back(std::make_tuple(i, j, .0));
