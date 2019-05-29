@@ -179,8 +179,10 @@ void Loop(int a) {
 }
 
 int main(int argc, char **argv) {
+#ifdef _WIN64
 	HWND hWnd = GetConsoleWindow();
 	ShowWindow(hWnd, SW_HIDE);
+#endif
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);

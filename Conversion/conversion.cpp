@@ -153,9 +153,11 @@ int main(int argc, char* argv[]) {
 	vector<tuple<int, int, double> > hMap;
 	std::tuple<int, int, double> point;
 
+#ifdef _WIN64
 	HWND hWnd = GetConsoleWindow();
 	ShowWindow(hWnd, SW_HIDE);
-
+#endif
+	
 	for (int i = 0; i < 20; ++i) {
 		for (int j = 0; j < 20; ++j) {
 			hMap.push_back(std::make_tuple(i, j, .0));
