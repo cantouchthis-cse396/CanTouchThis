@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 RED='\033[0;31m'	# red
 GREEN='\033[0;32m'	# green
@@ -76,4 +76,3 @@ else
 	echo -e "Executable file: ./Executable/CanTouchThis"
 fi
 echo -ne ${NO_COLOR}
-
