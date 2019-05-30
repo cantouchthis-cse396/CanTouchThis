@@ -4,7 +4,10 @@
 #include <QMainWindow>
 #include "../Communication/ControllerClient.h"
 #include "../Communication/Utility.h"
+
+#ifdef __linux__
 #include <unistd.h>
+#endif
 
 namespace Ui {
 class MainWindow;
@@ -44,9 +47,11 @@ private:
     Ui::MainWindow *ui;
     CanTouchThis::ControllerClient* client;
 
+#ifdef __linux__
     pid_t conversionPID;
     pid_t viewerPID;
     pid_t commPID;
+#endif
 };
 
-#endif // MAINWINDOW_H
+#endif //MAINWINDOW_H
