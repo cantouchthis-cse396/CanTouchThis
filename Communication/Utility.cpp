@@ -134,7 +134,7 @@ namespace CanTouchThis {
 
 	std::string commandToString(Command command)
 	{
-		std::string value;
+		std::string value = "";
 
 		switch (command) {
 			case Command::INIT: value = CONTROLLER_INIT; break;
@@ -165,7 +165,7 @@ namespace CanTouchThis {
 
 	Command stringToCommand(const std::string& command)
 	{
-		Command value;
+		Command value = Command::INIT;
 
 		if (command == CONTROLLER_INIT) value = Command::INIT;
 		else if (command == CONTROLLER_START_SCAN) value = Command::START_SCAN;

@@ -27,8 +27,7 @@ namespace CanTouchThis {
 			Client();
 			Client(const std::string& ip, unsigned short port,
 				   const std::string& type);
-			void start(const std::string& ip, unsigned short port,
-					   const std::string& type);
+			void start(const std::string& type);
 
 			std::shared_ptr<boost::asio::ip::tcp::socket> socketptr;
 			boost::asio::ip::tcp::endpoint ep;

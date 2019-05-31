@@ -1,6 +1,6 @@
 CC=g++
 FLAGS=-std=c++14
-LIBS=-pthread -lboost_system
+LIBS=-pthread -lboost_system								# Dynamic linking
 COMM_DIR=../Communication
 
 all: client_conversion

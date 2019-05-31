@@ -1,6 +1,6 @@
 CC=g++
 FLAGS=-std=c++14
-LIBS=-pthread -lboost_system
+LIBS=-pthread -lboost_system							# Dynamic linking
 
 all: utility server client_scanner client_conversion client_viewer client_controller
 
@@ -9,7 +9,7 @@ utility:
 
 server:
 	$(CC) -c CommServer.cpp ServerTest.cpp Utility.cpp $(FLAGS)
-	$(CC) CommServer.o ServerTest.o Utility.o -o Server $(LIBS)
+	$(CC) CommServer.o ServerTest.o Utility.o -o Communication $(LIBS)
 
 client:
 	$(CC) -c Client.cpp $(FLAGS)
@@ -27,5 +27,5 @@ client_controller:
 	$(CC) -c ControllerClient.cpp ControllerTest.cpp $(FLAGS)
 
 clean:
-	rm -f *.o Server
+	rm -f *.o Communication
 

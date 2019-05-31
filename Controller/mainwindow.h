@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "../Communication/ControllerClient.h"
 #include "../Communication/Utility.h"
+#include <unistd.h>
 
 namespace Ui {
 class MainWindow;
@@ -36,13 +37,16 @@ private slots:
 
     void on_pushButton_6_clicked();
 
-
 private:
     char isPushed[6];
     bool flag1;
     int flag2;
     Ui::MainWindow *ui;
     CanTouchThis::ControllerClient* client;
+
+    pid_t conversionPID;
+    pid_t viewerPID;
+    pid_t commPID;
 };
 
 #endif // MAINWINDOW_H

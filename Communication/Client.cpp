@@ -1,11 +1,11 @@
 #include "Client.h"
 
 namespace CanTouchThis {
-	Client::Client(const std::string& ip, unsigned short port, 
+	Client::Client(const std::string& ip, unsigned short port,
 				   const std::string& type)
 		: ep(boost::asio::ip::address::from_string(ip), port)
 	{
-		start(ip, port, type);	
+		start(type);
 	}
 
 	Client::~Client()
@@ -13,11 +13,10 @@ namespace CanTouchThis {
 		if (socketptr->is_open())
 			socketptr->close();
 	}
-	
-	void Client::start(const std::string& ip, unsigned short port, 
-						const std::string& type)
+
+	void Client::start(const std::string& type)
 	{
-		socketptr.reset(new boost::asio::ip::tcp::socket(ioContext, 
+		socketptr.reset(new boost::asio::ip::tcp::socket(ioContext,
 						ep.protocol()));
 		try {
 			socketptr->connect(ep);

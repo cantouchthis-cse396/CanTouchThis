@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
 	ShowWindow(hWnd, SW_HIDE);
 #endif
 
-	CanTouchThis::CommServer server(9001, true);
+	CanTouchThis::CommServer server(CanTouchThis::PORT, true);
 
 	return 0;
 }
