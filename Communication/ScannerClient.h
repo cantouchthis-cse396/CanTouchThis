@@ -3,6 +3,7 @@
 #include "Client.h"
 #include <condition_variable>
 #include <mutex>
+#include <thread>
 
 namespace CanTouchThis {
 

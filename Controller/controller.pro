@@ -37,6 +37,9 @@ HEADERS += \
         ../Communication/Client.h \
         ../Communication/ControllerClient.h
 
+LIBS += \
+        -lboost_system
+
 FORMS += \
         mainwindow.ui
 

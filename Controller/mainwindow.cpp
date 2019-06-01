@@ -42,6 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    delete client;
     delete ui;
 
 #ifdef _WIN64
